@@ -1,13 +1,15 @@
-	var colour = '#000000';
-	function colorP(clr) 
-	{
-		colour =  clr;
-    }
-    var r = 10;
-	function size(s) 
-	{
-		r = s;
-    }
+var colour = '#000000';
+
+function colorP(clr) {
+   colour =  clr;
+}
+
+var r = 10;
+
+function size(s) {
+   r = s;
+}
+
 var c1 = document.getElementById("layer1");
 var ctx1 = c1.getContext("2d");
 ctx1.fillStyle = "#FFFFFF";
@@ -20,7 +22,9 @@ ctx.lineCap = "round";
 var draw = false;
 var lineStart = true;
 var lastX, lastY;
+
 function yesDraw() { draw = true; lineStart = true }
+
 function mouseMove(e) {
 	ctx.lineWidth = r * 2;
 	ctx.strokeStyle = colour; 
@@ -31,10 +35,13 @@ function mouseMove(e) {
       drawing(x,y);
    }
 }
+
 function noDraw() { draw = false }
+
 document.addEventListener("mousemove",mouseMove);
 document.addEventListener("mousedown",yesDraw);
 document.addEventListener("mouseup",noDraw);
+
 function drawing(x, y) {
   if(lineStart){
      lastX = x;
@@ -48,3 +55,44 @@ function drawing(x, y) {
   lastX = x;
   lastY = y;
 }
+
+/* color picker */
+
+const pickrContainer = document.querySelector('.pickr-container');
+
+const el = document.createElement('p');
+pickrContainer.appendChild(el);
+let pickr = null;
+// Create fresh instance
+pickr = new Pickr(Object.assign({
+   el, theme:'classic',
+   default: '#42445a'
+},
+{
+   swatches: [
+      'rgba(244, 67, 54, 1)',
+      'rgba(233, 30, 99, 0.95)',
+      'rgba(156, 39, 176, 0.9)',
+      'rgba(103, 58, 183, 0.85)',
+      'rgba(63, 81, 181, 0.8)',
+      'rgba(33, 150, 243, 0.75)',
+      'rgba(3, 169, 244, 0.7)',
+      'rgba(0, 188, 212, 0.7)',
+      'rgba(0, 150, 136, 0.75)',
+      'rgba(76, 175, 80, 0.8)',
+      'rgba(139, 195, 74, 0.85)',
+      'rgba(205, 220, 57, 0.9)',
+      'rgba(255, 235, 59, 0.95)',
+      'rgba(255, 193, 7, 1)'
+   ],
+   components: {
+      preview: true,
+
+      interaction: {
+         save: true
+      }
+   }
+})).on('save', (color, instance) => {
+   colorP(color.toHEXA().toString())
+   pickr.hide();
+});
