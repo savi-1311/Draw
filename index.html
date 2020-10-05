@@ -8,6 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 
   <link href="css.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   <title>Watermelon Duck</title>
 </head>
@@ -40,32 +41,36 @@
     <div id="color-box">
       <h3>Brush Colour</h3>
       <button onclick="colorP('#000000')" class="paint-color"
-        style="cursor : url('shadowpntbrsh.cur'), auto; background-color : #000000;"></button>
+        style="cursor : url('shadowpntbrsh.cur'), auto; background-color : #000000;" data-toggle="tooltip" data-placement="right" title="Black"></button>
       <button onclick="colorP('#ff0000')" class="paint-color"
-        style="cursor : url('redpntbrsh.cur'), auto; background-color : #ff0000;"></button>
+        style="cursor : url('redpntbrsh.cur'), auto; background-color : #ff0000;" data-toggle="tooltip" data-placement="right" title="red"></button>
       <button onclick="colorP('#0000ff')" class="paint-color"
-        style="cursor : url('bluepntbrsh.cur'), auto; background-color : #0000ff;"></button>
+        style="cursor : url('bluepntbrsh.cur'), auto; background-color : #0000ff;" data-toggle="tooltip" data-placement="right" title="Blue"></button>
       <button onclick="colorP('#00FF00')" class="paint-color"
-        style="cursor : url('greenpntbrsh.cur'), auto; background-color : #00FF00;"></button>
+        style="cursor : url('greenpntbrsh.cur'), auto; background-color : #00FF00;" data-toggle="tooltip" data-placement="right" title="green"></button>
       <button onclick=" colorP('#ffff00')" class="paint-color"
-        style="cursor : url('yellowpntbrsh.cur'), auto; background-color : #ffff00;"></button>
+        style="cursor : url('yellowpntbrsh.cur'), auto; background-color : #ffff00;" data-toggle="tooltip" data-placement="right" title="yellow"></button>
       <button onclick="colorP('#ff7eff')" class="paint-color"
-        style="cursor : url('pink_paint_brush.cur'), auto; background-color : #ff7eff;"></button>
+        style="cursor : url('pink_paint_brush.cur'), auto; background-color : #ff7eff;" data-toggle="tooltip" data-placement="right" title="pink"></button>
       <button onclick="colorP('#9966ff')" class="paint-color"
-        style="cursor : url('purplepntbrsh.cur'), auto; background-color : #9966ff;"></button>
+        style="cursor : url('purplepntbrsh.cur'), auto; background-color : #9966ff;" data-toggle="tooltip" data-placement="right" title="purple"></button>
       <button onclick="colorP('#999999')" class="paint-color"
-        style="cursor : url('shadowpntbrsh.cur'), auto; background-color : #999999;"></button>
+        style="cursor : url('shadowpntbrsh.cur'), auto; background-color : #999999;" data-toggle="tooltip" data-placement="right" title="grey"></button>
       <button onclick="colorP('#C0C0C0')" class="paint-color"
-        style="cursor : url('silverpntbrsh.cur'), auto; background-color :#C0C0C0;"></button>
+        style="cursor : url('silverpntbrsh.cur'), auto; background-color :#C0C0C0;" data-toggle="tooltip" data-placement="right" title="silver"></button>
       <button onclick="colorP('#ffffff')" class="paint-color"
-        style="cursor : url('eraser.cur'), auto; background-color : #ffffff;"></button>
+        style="cursor : url('eraser.cur'), auto; background-color : #ffffff;" data-toggle="tooltip" data-placement="right" title="eraser"></button>
     </div>
 
   </div>
 
   <script src="js.js"></script>
-
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script>$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})</script>
 </body>
 
 </html>
