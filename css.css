@@ -31,7 +31,7 @@ cursor : url('rainbowpntbrsh.cur'), auto;
   justify-content: space-around;
   align-items: center;
   border : solid #000000 2px;
-  padding : 2%;
+  padding : 1%;
 }
 #color-box
 {
@@ -41,5 +41,16 @@ display: flex;
   justify-content: space-around;
   align-items: center;
   border : solid #000000 2px;
-  padding : 2%;
+  padding : 1%;
+}
+
+.paint-color{
+  padding: 1%;
+  border: 1%;
+  margin-bottom: 0.7vh;
+  border-radius: 100%;
+  text-align: center;
+  height: 49px;
+  width: 49px;
+  color: #FFFFFF;
 }

@@ -1,50 +1,71 @@
 <html>
+
 <head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">  
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-    
-    <link href="css.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 
-    <title>Watermelon Duck</title>
-  </head>
+  <link href="css.css" rel="stylesheet">
+
+  <title>Watermelon Duck</title>
 </head>
+</head>
+
 <body>
-	<div id = "heading">
-		Paint Your Imagination
-	</div>
-	<br>
-	<br>
-<div id="outer-box">
-	<div id="size-box">
-<h3>Brush Size</h3>
-<button onclick="size(5)" style= "cursor : pointer ;padding : 1%; border : 1%; background-color : #000000 ;border-radius : 100%; text-align: center; height : 10px; width : 10px;"></button>
-<button onclick="size(7)" style= "cursor : pointer ;padding : 1%; border : 1%; background-color : #000000 ;border-radius : 100%; text-align: center; height : 14px; width : 14px;"></button>
-<button onclick="size(10)" style= "cursor : pointer ;padding : 1%; border : 1%; background-color : #000000 ;border-radius : 100%; text-align: center; height : 20px; width : 20px;"></button>
-<button onclick="size(15)" style= "cursor : pointer ;padding : 1%; border : 1%; background-color : #000000 ;border-radius : 100%; text-align: center; height : 30px; width : 30px;"></button>
-   </div>
-   <div style="position: relative;">
-   <canvas id="layer1" width="800" height="600" 
-   style="position: absolute; left: -400; top: 0; z-index: 0; border: solid 2px #000000;"></canvas>
-   <canvas id="myCanvas" width="800" height="600" 
-   style="position: absolute; left: -400; top: 0; z-index: 1; border: solid 2px #000000;"></canvas>
-</div>
-<div id="color-box">
-<h3>Brush Colour</h3>
-<button onclick="colorP('#000000')" style="cursor : url('shadowpntbrsh.cur'), auto; background-color : #000000; color : #FFFFFF; padding : 1%; border : 1%; border-radius : 100%; text-align: center; height : 75px; width : 75px;"></button>
-<button onclick="colorP('#ff0000')" style="cursor : url('redpntbrsh.cur'), auto; background-color : #ff0000; color : #FFFFFF; padding : 1%; border : 1%; border-radius : 100%; text-align: center; height : 75px; width : 75px;"></button>
-<button onclick="colorP('#0000ff')" style="cursor : url('bluepntbrsh.cur'), auto; background-color : #0000ff; color : #000000; padding : 1%; border : 1%; border-radius : 100%; text-align: center; height : 75px;width : 75px;" ></button>
-<button onclick="colorP('#00FF00')" style="cursor : url('greenpntbrsh.cur'), auto; background-color : #00FF00; color : #FFFFFF; padding : 1%; border : 1%; border-radius : 100%; text-align: center; height : 75px;width : 75px;"></button>
-<button onclick="colorP('#ffff00')" style="cursor : url('yellowpntbrsh.cur'), auto; background-color : #ffff00; color : #FFFFFF; padding : 1%; border : 1%; border-radius : 100%; text-align: center; height : 75px;width : 75px;"></button>
-<button onclick="colorP('#ffffff')" style="cursor : url('eraser.cur'), auto; background-color : #ffffff; color : #000000; padding : 1%; border : 1%; border-radius : 100%; text-align: center; height : 75px; width : 75px;"></button>
-</div>
+  <div id="heading">
+    Paint Your Imagination
+  </div>
+  <br>
+  <br>
+  <div id="outer-box">
+    <div id="size-box">
+      <h3>Brush Size</h3>
+      <button onclick="size(5)"
+        style="cursor : pointer ;padding : 1%; border : 1%; background-color : #000000 ;border-radius : 100%; text-align: center; height : 10px; width : 10px;"></button>
+      <button onclick="size(7)"
+        style="cursor : pointer ;padding : 1%; border : 1%; background-color : #000000 ;border-radius : 100%; text-align: center; height : 14px; width : 14px;"></button>
+      <button onclick="size(10)"
+        style="cursor : pointer ;padding : 1%; border : 1%; background-color : #000000 ;border-radius : 100%; text-align: center; height : 20px; width : 20px;"></button>
+      <button onclick="size(15)"
+        style="cursor : pointer ;padding : 1%; border : 1%; background-color : #000000 ;border-radius : 100%; text-align: center; height : 30px; width : 30px;"></button>
+    </div>
+    <div style="position: relative;">
+      <canvas id="layer1" width="800" height="600"
+        style="position: absolute; left: -400; top: 0; z-index: 0; border: solid 2px #000000;"></canvas>
+      <canvas id="myCanvas" width="800" height="600"
+        style="position: absolute; left: -400; top: 0; z-index: 1; border: solid 2px #000000;"></canvas>
+    </div>
+    <div id="color-box">
+      <h3>Brush Colour</h3>
+      <button onclick="colorP('#000000')" class="paint-color"
+        style="cursor : url('shadowpntbrsh.cur'), auto; background-color : #000000;"></button>
+      <button onclick="colorP('#ff0000')" class="paint-color"
+        style="cursor : url('redpntbrsh.cur'), auto; background-color : #ff0000;"></button>
+      <button onclick="colorP('#0000ff')" class="paint-color"
+        style="cursor : url('bluepntbrsh.cur'), auto; background-color : #0000ff;"></button>
+      <button onclick="colorP('#00FF00')" class="paint-color"
+        style="cursor : url('greenpntbrsh.cur'), auto; background-color : #00FF00;"></button>
+      <button onclick=" colorP('#ffff00')" class="paint-color"
+        style="cursor : url('yellowpntbrsh.cur'), auto; background-color : #ffff00;"></button>
+      <button onclick="colorP('#ff7eff')" class="paint-color"
+        style="cursor : url('pink_paint_brush.cur'), auto; background-color : #ff7eff;"></button>
+      <button onclick="colorP('#9966ff')" class="paint-color"
+        style="cursor : url('purplepntbrsh.cur'), auto; background-color : #9966ff;"></button>
+      <button onclick="colorP('#999999')" class="paint-color"
+        style="cursor : url('shadowpntbrsh.cur'), auto; background-color : #999999;"></button>
+      <button onclick="colorP('#C0C0C0')" class="paint-color"
+        style="cursor : url('silverpntbrsh.cur'), auto; background-color :#C0C0C0;"></button>
+      <button onclick="colorP('#ffffff')" class="paint-color"
+        style="cursor : url('eraser.cur'), auto; background-color : #ffffff;"></button>
+    </div>
 
-</div>
+  </div>
 
-<script src="js.js"></script>
+  <script src="js.js"></script>
 
 
 </body>
+
 </html>
