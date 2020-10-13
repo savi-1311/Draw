@@ -55,6 +55,12 @@ function drawing(x, y) {
   lastX = x;
   lastY = y;
 }
+//Generic fill function
+function fillCanvas(canvas, color) {
+  let ctx = canvas.getContext("2d");
+  ctx.fillStyle = color;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
 
 /* color picker */
 
